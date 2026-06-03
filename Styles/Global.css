@@ -25,7 +25,7 @@ body {
     line-height: 1.6
 }
 
-.hero, .over-hero, .contact-layout, .prijzen-hero,
+.hero, .hero-text, .hero.img, .over-hero, .contact-layout, .prijzen-hero,
 .werkwijze, .cta-strip, footer, .pakket-grid {
     max-width: var(--max-w);
     margin-left: auto;
@@ -248,6 +248,7 @@ nav {
 /* ─── SECTIONS ────────────────────────────────────── */
 
 section.wrap {
+    padding: 3.5rem 2rem;
     max-width: var(--max-w);
     margin: 0 auto;
     width: 100%
@@ -1196,6 +1197,9 @@ footer {
         padding: 1rem 1.25rem
     }
 
+    section.wrap {
+        padding: 2.5rem 1.25rem
+    }
 
     .werkwijze {
         padding: 2.5rem 1.25rem
@@ -1299,7 +1303,9 @@ footer {
         font-size: 56px
     }
 
-  
+    section.wrap {
+        padding: 5rem 4rem
+    }
 
     .werkwijze {
         padding: 5rem 4rem
