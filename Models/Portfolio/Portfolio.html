@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../Styles/Global.css">
+    <script src="../../Js/Load-nav.js" defer></script>
+</head>
+
+<body>
+
+    <div id="navigation"></div>
+
+    <div id="page-portfolio" class="page">
+        <section class="wrap" style="padding-bottom:1rem">
+            <p class="sec-label">Ons werk</p>
+            <h2 class="sec-title" style="margin-bottom:1.5rem">Portfolio</h2>
+
+            <div class="portfolio-filters">
+                <button class="filter-btn active" onclick="filterPortfolio('all',this)">Alles</button>
+                <button class="filter-btn" onclick="filterPortfolio('product',this)">Product</button>
+                <button class="filter-btn" onclick="filterPortfolio('portret',this)">Portretten</button>
+                <button class="filter-btn" onclick="filterPortfolio('sport',this)">Sport</button>
+                <button class="filter-btn" onclick="filterPortfolio('groep',this)">Groep</button>
+                <button class="filter-btn" onclick="filterPortfolio('video',this)">Video</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid"></div>
+        </section>
+
+        <div class="cta-strip" style="margin-top:3rem">
+            <div>
+                <h2>Iets gezien dat u aanspreekt?</h2>
+                <p>Bespreek uw project vrijblijvend met ons.</p>
+            </div>
+
+            <a class="btn-acc" href="/Models/Contact/Contactpage.html">
+                Neem contact op
+            </a>
+        </div>
+
+        <footer>
+            <span class="f-logo">F<span>P</span>h</span>
+
+            <ul class="f-links">
+                <li><a href="/Models/Home/Home.html">Home</a></li>
+                <li><a href="/Models/Portfolio/Portfolio.html">Portfolio</a></li>
+                <li><a href="/Models/Contact/Contactpage.html">Contact</a></li>
+            </ul>
+
+            <span class="f-copy">© 2026 FPh</span>
+        </footer>
+    </div>
+</body>
+</html>
