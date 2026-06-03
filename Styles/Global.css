@@ -25,7 +25,7 @@ body {
     line-height: 1.6
 }
 
-.hero, .hero-text, .hero.img, .over-hero, .contact-layout, .prijzen-hero,
+.hero, .over-hero, .contact-layout, .prijzen-hero,
 .werkwijze, .cta-strip, footer, .pakket-grid {
     max-width: var(--max-w);
     margin-left: auto;
