@@ -44,7 +44,12 @@ body {
 }
 
 .over-text {
-    padding: 3.5rem 2rem
+    padding: 3rem 1rem;
+    background: var(--off);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; /* ← Voeg toe */
 }
 
 .prijzen-hero {
@@ -657,18 +662,33 @@ footer {
 .over-hero {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* ← Blijf 2 kolommen */
     gap: 0;
-    min-height: 380px
+    min-height: auto;
 }
 
+.over-img {
+    background: #2a2a26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.1);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+    .over-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
 .over-text {
+    order: 2; /* ← Text komt als tweede (eronder) */
     padding: 3rem 1rem;
-    background: var(--off);
-    display: flex;
-    flex-direction: column;
-    justify-content: center
 }
 
     .over-text h1 {
@@ -977,30 +997,78 @@ footer {
    RESPONSIVE BREAKPOINTS
    ════════════════════════════════════════════════════ */
 
-/* ─── TABLET 1024px ───────────────────────────────── */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 36px
+/* ─── MOBILE 480px ────────────────────────────────── */
+@media (max-width: 480px) {
+    nav {
+        padding: 1rem 1.25rem
     }
 
-    .diensten-grid {
-        grid-template-columns: repeat(2,1fr)
+    .cta-strip {
+        padding: 2rem 1.25rem
+    }
+
+    footer {
+        padding: 1.5rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        letter-spacing: -0.5px
+    }
+
+    .sec-title {
+        font-size: 24px
     }
 
     .stappen {
-        grid-template-columns: repeat(2,1fr)
-    }
-
-    .pakket-grid {
-        grid-template-columns: repeat(2,1fr)
+        grid-template-columns: 1fr
     }
 
     .portfolio-grid {
-        grid-template-columns: repeat(2,1fr)
+        grid-template-columns: 1fr
     }
 
-    .values {
-        grid-template-columns: repeat(2,1fr)
+    .p-item.wide {
+        grid-column: span 1
+    }
+
+    .stats-row {
+        flex-direction: column
+    }
+
+    .stat {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 0.5px solid var(--border)
+    }
+
+        .stat:last-child {
+            border-bottom: none
+        }
+
+    .btns {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .btn-p {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .pakket-grid {
+        padding: 1.5rem 1.25rem
+    }
+
+    .contact-info, .contact-form {
+        padding: 2rem 1.25rem
+    }
+
+    .over-text {
+        padding: 2rem 1.25rem
     }
 }
 
@@ -1082,8 +1150,8 @@ footer {
     /* over */
     .over-hero {
         margin-top: 30px;
+        grid-template-columns: 1fr;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 0;
         min-height: 380px
     }
@@ -1098,15 +1166,20 @@ footer {
         letter-spacing: 0.1em;
         text-transform: uppercase;
         overflow: hidden;
-        /* min-height verwijderd - grid zorgt nu voor hoogte */
     }
 
         .over-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* ← Voeg toe */
+            object-fit: cover;
             display: block;
         }
+
+    .over-text {
+        order: 2; /* ← Text komt als tweede (eronder) */
+        padding: 3rem 1rem;
+    }
+
     /* diensten */
     .diensten-grid {
         grid-template-columns: 1fr
@@ -1114,7 +1187,7 @@ footer {
 
     /* stappen */
     .stappen {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
         gap: 1.25rem
     }
 
@@ -1170,78 +1243,62 @@ footer {
         }
 }
 
-/* ─── MOBILE 480px ────────────────────────────────── */
-@media (max-width: 480px) {
-    nav {
-        padding: 1rem 1.25rem
-    }
-
-    .cta-strip {
-        padding: 2rem 1.25rem
-    }
-
-    footer {
-        padding: 1.5rem 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem
-    }
-
+/* ─── TABLET 1024px ───────────────────────────────── */
+@media (max-width: 1024px) {
     .hero h1 {
-        font-size: 28px;
-        letter-spacing: -0.5px
+        font-size: 36px
     }
 
-    .sec-title {
-        font-size: 24px
+    .diensten-grid {
+        grid-template-columns: repeat(2,1fr)
     }
 
     .stappen {
-        grid-template-columns: 1fr
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr
-    }
-
-    .p-item.wide {
-        grid-column: span 1
-    }
-
-    .stats-row {
-        flex-direction: column
-    }
-
-    .stat {
-        flex: 1 1 100%;
-        border-right: none;
-        border-bottom: 0.5px solid var(--border)
-    }
-
-        .stat:last-child {
-            border-bottom: none
-        }
-
-    .btns {
-        flex-direction: column;
-        align-items: flex-start
-    }
-
-    .btn-p {
-        flex-direction: column;
-        text-align: center
+        grid-template-columns: repeat(2,1fr)
     }
 
     .pakket-grid {
-        padding: 1.5rem 1.25rem
+        grid-template-columns: repeat(2,1fr)
     }
 
-    .contact-info, .contact-form {
-        padding: 2rem 1.25rem
+    .portfolio-grid {
+        grid-template-columns: repeat(2,1fr)
     }
+
+    .values {
+        grid-template-columns: repeat(1,1fr)
+    }
+
+    /* over */
+    .over-hero {
+        margin-top: 30px;
+        display: grid;
+        gap: 0;
+        min-height: 380px
+    }
+
+    .over-img {
+        background: #2a2a26;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.1);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+
+        .over-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
     .over-text {
-        padding: 2rem 1.25rem
+        order: 2; /* ← Text komt als tweede (eronder) */
+        padding: 3rem 1rem;
     }
 }
 
