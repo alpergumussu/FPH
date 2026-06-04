@@ -188,6 +188,7 @@ nav {
 }
 
 .btns {
+    border-radius: 20px;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -201,7 +202,7 @@ nav {
     font-size: 13px;
     font-weight: 500;
     border: none;
-    border-radius: 2px;
+    border-radius: 20px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -213,6 +214,7 @@ nav {
     }
 
 .btn-s {
+    border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
     color: var(--mid);
@@ -504,13 +506,13 @@ section.wrap {
     }
 
 .btn-acc {
+    border-radius: 20px;
     background: var(--accent);
     color: var(--dark);
     padding: 0.8rem 1.75rem;
     font-size: 13px;
     font-weight: 500;
     border: none;
-    border-radius: 2px;
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.2s;
@@ -583,7 +585,7 @@ footer {
     font-weight: 500;
     padding: 0.4rem 1rem;
     border: 0.5px solid var(--border);
-    border-radius: 2px;
+    border-radius: 20px;
     background: var(--white);
     color: var(--mid);
     cursor: pointer;
