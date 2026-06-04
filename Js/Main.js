@@ -1,12 +1,16 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1 });
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeEls = document.querySelectorAll(
+        '.hero, .over-hero, section.wrap, .werkwijze, .cta-strip, .contact-wrapper, .pakket-grid, .prijzen-hero'
+    );
 
-document.querySelectorAll('.hero, .over-hero, section.wrap, .werkwijze, .cta-strip, .contact-wrapper, .pakket-grid').forEach(el => {
-    observer.observe(el);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
 });

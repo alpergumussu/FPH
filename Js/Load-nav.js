@@ -18,3 +18,4 @@ if (navContainer) {
 document.querySelectorAll('a[href^="/Models/"]').forEach(a => {
     a.href = base + a.getAttribute('href');
 });
+
