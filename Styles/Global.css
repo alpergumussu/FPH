@@ -57,6 +57,7 @@ body {
 }
 
 
+
 /* ─── NAV ─────────────────────────────────────────── */
 
 nav {
@@ -805,6 +806,27 @@ footer {
 }
 
 /* ─── CONTACT ─────────────────────────────────────── */
+.c-val {
+    display: flex;
+    flex-direction: column;
+}
+
+.hint {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 4px;
+}
+.c-val a {
+    color: #c89b3c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+    .c-val a:hover {
+        color: #e0b24a;
+    }
+
 .contact-wrapper {
     padding-top: 2rem;
     display: flex;
