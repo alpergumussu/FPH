@@ -19,18 +19,36 @@
 
 body {
     font-family: 'DM Sans',sans-serif;
-    background: var(--white);
+    background: var(--off);
     color: var(--dark);
     font-size: 15px;
     line-height: 1.6
 }
 
-.hero, .hero-text, .hero.img, .over-hero, .contact-layout, .prijzen-hero,
+.hero, .hero-img, .over-hero, .contact-info, .prijzen-hero,
 .werkwijze, .cta-strip, footer, .pakket-grid {
     max-width: var(--max-w);
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 100%
+}
+
+.cta-strip {
+    margin-bottom: 15px
+}
+
+.contact-info {
+    padding: 3.5rem 2rem;
+    background: var(--off)
+}
+
+.over-text {
+    padding: 3.5rem 2rem
+}
+
+.prijzen-hero {
+    padding: 3.5rem 2rem
 }
 
 /* ─── NAV ─────────────────────────────────────────── */
@@ -124,12 +142,12 @@ nav {
 
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     min-height: 500px
 }
 
 .hero-text {
-    padding: 3.5rem 2rem 2.5rem;
+    padding: 3.5rem 0rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,9 +266,9 @@ nav {
 /* ─── SECTIONS ────────────────────────────────────── */
 
 section.wrap {
-    padding: 3.5rem 2rem;
     max-width: var(--max-w);
     margin: 0 auto;
+    padding: 2rem 0rem;
     width: 100%
 }
 
@@ -276,6 +294,7 @@ section.wrap {
 .diensten-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 1fr;
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
@@ -392,8 +411,8 @@ section.wrap {
 /* ─── WERKWIJZE ───────────────────────────────────── */
 
 .werkwijze {
-    background: var(--off);
-    padding: 3.5rem 2rem
+    padding: 2rem 0rem;
+    margin-bottom: 0
 }
 
     .werkwijze > * {
@@ -627,8 +646,9 @@ footer {
 /* ─── OVER ────────────────────────────────────────── */
 
 .over-hero {
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 0;
     min-height: 380px
 }
@@ -753,17 +773,18 @@ footer {
 }
 
 /* ─── CONTACT ─────────────────────────────────────── */
-
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-height: 500px
+.contact-wrapper {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center
 }
 
 .contact-info {
-    background: var(--off);
-    padding: 3rem 2rem
+    padding: 3.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
 }
 
     .contact-info h1 {
@@ -784,9 +805,11 @@ footer {
 
 .contact-detail {
     display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
-    margin-bottom: 1.25rem
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+    text-align: center
 }
 
 .c-icon {
@@ -798,7 +821,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0
+    flex-shrink: 0;
+    margin-bottom: 0.25rem
 }
 
     .c-icon svg {
@@ -819,76 +843,6 @@ footer {
     font-size: 14px;
     font-weight: 500
 }
-
-.contact-form {
-    padding: 3rem 2rem;
-    background: var(--white)
-}
-
-    .contact-form h2 {
-        font-family: 'Playfair Display',serif;
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 1.5rem
-    }
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem
-}
-
-.form-group {
-    margin-bottom: 1rem
-}
-
-    .form-group label {
-        display: block;
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--mid);
-        margin-bottom: 0.4rem
-    }
-
-    .form-group input, .form-group textarea, .form-group select {
-        width: 100%;
-        padding: 0.65rem 0.85rem;
-        border: 0.5px solid #d0cec8;
-        border-radius: 2px;
-        font-size: 14px;
-        font-family: 'DM Sans',sans-serif;
-        background: var(--white);
-        color: var(--dark);
-        outline: none;
-        transition: border-color 0.2s
-    }
-
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            border-color: var(--accent)
-        }
-
-    .form-group textarea {
-        resize: vertical;
-        min-height: 100px
-    }
-
-.form-success {
-    display: none;
-    background: #f0faf4;
-    border: 0.5px solid #a8d8bc;
-    border-radius: 3px;
-    padding: 1rem 1.25rem;
-    font-size: 14px;
-    color: var(--success);
-    margin-bottom: 1rem
-}
-
-    .form-success.show {
-        display: block
-    }
 
 /* ─── PRIJZEN ─────────────────────────────────────── */
 
@@ -1094,11 +1048,11 @@ footer {
 
     /* hero */
     .hero {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
     }
 
     .hero-img {
-        min-height: 200px
+        min-height: 200px;
     }
 
     .hero h1 {
@@ -1116,16 +1070,6 @@ footer {
 
     .over-img {
         min-height: 200px
-    }
-
-    /* contact */
-    .contact-layout {
-        grid-template-columns: 1fr
-    }
-
-    /* form */
-    .form-row {
-        grid-template-columns: 1fr
     }
 
     /* diensten */
@@ -1195,14 +1139,6 @@ footer {
 @media (max-width: 480px) {
     nav {
         padding: 1rem 1.25rem
-    }
-
-    section.wrap {
-        padding: 2.5rem 1.25rem
-    }
-
-    .werkwijze {
-        padding: 2.5rem 1.25rem
     }
 
     .cta-strip {
@@ -1277,38 +1213,15 @@ footer {
 /* ─── ULTRAWIDE 1600px+ ───────────────────────────── */
 @media (min-width: 1600px) {
     nav {
-        max-width: var(--max-w);
-        margin: 0 auto;
-        padding-left: 3rem;
-        padding-right: 3rem
-    }
-
-    nav {
         max-width: 100%
     }
-        /* sticky nav spans full width */
+
         nav > * {
             max-width: var(--max-w)
         }
 
-    .hero {
-        max-width: 100%
-    }
-
-    .hero-text {
-        padding: 5rem 4rem
-    }
-
     .hero h1 {
         font-size: 56px
-    }
-
-    section.wrap {
-        padding: 5rem 4rem
-    }
-
-    .werkwijze {
-        padding: 5rem 4rem
     }
 
     .cta-strip {

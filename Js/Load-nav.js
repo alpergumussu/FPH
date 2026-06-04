@@ -8,5 +8,13 @@ if (navContainer) {
         .then(r => r.text())
         .then(html => {
             navContainer.innerHTML = html.replaceAll('href="/', `href="${base}/`);
+
+            document.getElementById('nav-toggle')?.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('open');
+            });
         });
 }
+
+document.querySelectorAll('a[href^="/Models/"]').forEach(a => {
+    a.href = base + a.getAttribute('href');
+});
