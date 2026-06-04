@@ -28,29 +28,13 @@ body {
 .hero, .hero-img, .over-hero, .contact-info, .prijzen-hero,
 .werkwijze, .cta-strip, footer, .pakket-grid {
     max-width: var(--max-w);
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 100%
 }
 
-.hero {
-    margin-top: 15px
-}
-
-.over-hero {
-    margin-top: 15px
-}
-
 .cta-strip {
-    background: var(--dark);
-    color: var(--white);
-    padding: 2.5rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 15px;
     margin-bottom: 15px
 }
 
@@ -164,7 +148,7 @@ nav {
 }
 
 .hero-text {
-    padding: 3.5rem 1.5rem 2.5rem;
+    padding: 3.5rem 0rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,7 +269,7 @@ nav {
 section.wrap {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0rem;
     width: 100%
 }
 
@@ -529,7 +513,7 @@ section.wrap {
 /* ─── FOOTER ──────────────────────────────────────── */
 
 footer {
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem 2rem;
     border-top: 0.5px solid var(--border);
     display: flex;
     justify-content: space-between;
@@ -1150,22 +1134,6 @@ footer {
         .stat:last-child, .stat:nth-last-child(2):nth-child(odd) {
             border-bottom: none
         }
-
-    section.wrap {
-        padding: 2rem 1.25rem
-    }
-
-    .werkwijze {
-        padding: 2rem 1.25rem
-    }
-
-    .hero-text {
-        padding: 2rem 1.25rem
-    }
-
-    .cta-strip {
-        padding: 2rem 1.25rem
-    }
 }
 
 /* ─── MOBILE 480px ────────────────────────────────── */
@@ -1183,18 +1151,6 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem
-    }
-
-    section.wrap {
-        padding: 2rem 1.25rem
-    }
-
-    .werkwijze {
-        padding: 2rem 1.25rem
-    }
-
-    .hero-text {
-        padding: 2rem 1.25rem
     }
 
     .hero h1 {
